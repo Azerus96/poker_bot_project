@@ -1,5 +1,12 @@
+import sys
+import os
+
+# Добавляем путь к src директории, чтобы корректно находить модули
+sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))
+
+from poker_bot import PokerBot  # После добавления пути к src, импорт будет работать
+
 import tkinter as tk
-from src.poker_bot import PokerBot
 
 class PokerGUI:
     def __init__(self):
